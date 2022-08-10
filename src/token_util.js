@@ -13,9 +13,11 @@ export async function getTokenOrRefresh() {
             cookie.set('speech-token', region + ':' + token, {maxAge: 540, path: '/'});
 
             console.log('Token fetched from back-end: ' + token);
+            
             return { authToken: token, region: region };
         } catch (err) {
             console.log(err.response.data);
+            console.log(err);
             return { authToken: null, error: err.response.data };
         }
     } else {

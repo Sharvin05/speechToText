@@ -7,15 +7,8 @@ import SpeechToText from './SpeechToText';
 function App() {
   return (
       <React.Fragment>
-        <BrowserRouter>
-          <Switch>
-            <Route path="/acs" exact={true} component={Acs} />
-            <Route path="/speech" exact={true} component={SpeechToText} />
-          </Switch>
-        </BrowserRouter>
+        <SpeechToText></SpeechToText>
       </React.Fragment>
-      
-    
   );
 }
 
